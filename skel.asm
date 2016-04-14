@@ -14,7 +14,7 @@ asm_main:
   enter 0,0                     ; Rutina de
   pusha
 
-;;
+
 ;; El codigo esta colocado en el segmento de texto. No modifique el
 ;; codigo antes o despues de este comentario
 ;;
@@ -22,5 +22,5 @@ asm_main:
   mov eax,0                     ; Retorna a C
   leave
   ret
-
+;;
 
