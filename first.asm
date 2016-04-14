@@ -30,7 +30,7 @@
   ;; de entrada
   ;;
   input1 resd 1
-  input2 read 1
+  input2 resd 1
 
   ;;
   ;; El codigo se coloca en el segmento .text
@@ -54,11 +54,11 @@
           mov     [input2], eax   ; lo almacena en input2
 
           mov     eax, [input1]   ; eax = dword en input1
-          mov     eax, [input2]   ; eax += dword en input2
+          add     eax, [input2]   ; eax += dword en input2
           mov     ebx, eax        ; ebx = eax
 
           dump_regs 1             ; imprime los valores de los registros
-          dump_men  2, outmsg1, 1 ; imprime la memoria
+          dump_mem  2, outmsg1, 1 ; imprime la memoria
           ;;
           ;; Ahora, se imprime los resultados en una serie de pasos
           ;;
